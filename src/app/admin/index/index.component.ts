@@ -6,9 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-
+  logoName: string = 'logo_light.png';
+  chartType: string = 'line';
   constructor() { }
-
+  myValue = 10;
   ngOnInit() {
   }
   side = 'start';
@@ -20,5 +21,9 @@ export class IndexComponent implements OnInit {
     { name: 'Trash' }
   ];
   basicRowHeight = 80;
+  public randomizeType(): void {
+    this.chartType = this.chartType === 'line' ? 'bar' : 'line';
+  }
+
 
 }

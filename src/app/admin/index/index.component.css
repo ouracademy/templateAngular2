@@ -1,3 +1,12 @@
 .demo-sidenav-container{
     min-height: 600px;
 }
+.brand{
+    display:inline;
+}
+.md-sidenav-content{
+   
+}
+.custom-sidenav-content{
+    overflow:hidden;
+}

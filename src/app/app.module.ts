@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { LandingModule } from './landing/landing.module';
 import { AdminModule } from './admin/admin.module';
 import { RoutingModule } from './routing.module';
+import 'hammerjs';
 
 @NgModule({
   declarations: [

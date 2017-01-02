@@ -1,5 +1,5 @@
 <md-sidenav-container class="demo-sidenav-container">
-  <md-sidenav #start (open)="myinput.focus()" mode="side">
+  <md-sidenav #start mode="side">
     <md-nav-list>
       <a md-list-item *ngFor="let link of links" href="http://www.google.com">
         <md-icon md-list-icon>folder</md-icon>
@@ -8,27 +8,88 @@
       </a>
     </md-nav-list>
   </md-sidenav>
+  <div class="custom-sidenav-content ">
+    <header class="section">
+      <div class="container">
+        <div class="columns is-mobile">
+          <div class="column is-4">
+            <button md-icon-button (click)="start.toggle()">
+                <md-icon  class="demo-toolbar-icon">menu</md-icon>
+             </button>
+            <div class="brand">
+              <img src="assets/img/{{logoName}}" alt="Logo">
+            </div>
+          </div>
+          <div class="column  is-4 ">
+            <button md-icon-button>
+                <md-icon  class="demo-toolbar-icon">mail</md-icon>
+            </button>
+            <button md-icon-button>
+              <md-icon  class="demo-toolbar-icon">notifications_none</md-icon>
+            </button>
+          </div>
+          <div class="column is-4 ">
+            <button md-icon-button [mdMenuTriggerFor]="menu" aria-hasPopup="true">
+              <md-icon>account_circle</md-icon>
+           </button>
+            <md-menu #menu="mdMenu" y-position="below" role="menu">
+              <button md-menu-item role="menuitem">  
+              <md-icon> dialpad </md-icon><span> Redial </span>
+            </button>
+              <button md-menu-item role="menuitem"> 
+                <md-icon> dialpad </md-icon><span> Settings </span> 
+            </button>
+              <button md-menu-item role="menuitem">
+                <md-icon> dialpad </md-icon><span> Sign Out </span>
+            </button>
+            </md-menu>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="tile">
+      Dashboard
+    </div>
+    <section class="section">
+      <div class="container">
+        <h2 class="subtitle">Sales</h2>
+        <div class="columns">
+          <div class="column is-3">
+            <doughnut></doughnut>
+          </div>
+          <div class="column is-3">
+            <doughnut></doughnut>
+          </div>
+          <div class="column is-3">
+            <doughnut></doughnut>
+          </div>
+          <div class="column is-3">
+            <doughnut></doughnut>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-half is-offset-one-quarter">
+            <random [lineChartType]="chartType"></random>
+          </div>
+        </div>
+        <button (click)="randomizeType()" style="display: inline-block">Toggle</button>
+      </div>
+    </section>
 
-  <md-sidenav #end align="end">
-    End Side Drawer
-    <br>
-    <button md-button (click)="end.close()">Close</button>
-  </md-sidenav>
-  <div class="demo-sidenav-content">
-    <md-toolbar color="primary">
-      <md-icon (click)="start.toggle()" class="demo-toolbar-icon">menu</md-icon>
-      <span>Name</span>
-    </md-toolbar>
-     <md-card>
-    <md-card-title>Basic grid list</md-card-title>
-    <md-card-content class="demo-basic-list">
-      <md-grid-list cols="4" [rowHeight]="basicRowHeight">
-        <md-grid-tile> One </md-grid-tile>
-        <md-grid-tile> Two </md-grid-tile>
-        <md-grid-tile> Three </md-grid-tile>
-        <md-grid-tile> Four </md-grid-tile>
-      </md-grid-list>
-    </md-card-content>
-  </md-card>
+    <md-card>
+      <md-card-title>Basic grid list</md-card-title>
+      <md-card-content class="demo-basic-list">
+        <md-grid-list cols="4" [rowHeight]="basicRowHeight">
+          <md-grid-tile> One </md-grid-tile>
+          <md-grid-tile> Two </md-grid-tile>
+          <md-grid-tile> Three </md-grid-tile>
+          <md-grid-tile> Four </md-grid-tile>
+        </md-grid-list>
+      </md-card-content>
+    </md-card>
   </div>
 </md-sidenav-container>
