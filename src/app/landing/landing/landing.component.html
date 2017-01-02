@@ -1,0 +1,250 @@
+<section class="hero is-with-image is-fullheight is-dark" [style.background-image]="'url('+imageUrl+')'">
+  <!-- Hero header: will stick at the top -->
+  <div class="hero-head">
+    <header class="nav">
+      <div class="container">
+        <div class="nav-left">
+          <a class="nav-item">
+            <img src="assets/img/{{logoName}}" alt="Logo">
+          </a>
+        </div>
+        <div class="nav-center">
+          <a class="nav-item" href="#">
+            <span class="icon">
+           <i class="fa fa-github"></i>
+           </span>
+          </a>
+          <a class="nav-item" href="#">
+            <span class="icon">
+        <i class="fa fa-twitter"></i>
+      </span>
+          </a>
+        </div>
+        <span class="nav-toggle" [class.is-active]="isActive" (click)="toggleMenu()">
+          <span></span>
+        <span></span>
+        <span></span>
+        </span>
+        <div class="nav-right nav-menu" [class.is-active]="isActive">
+          <a class="nav-item is-active">
+            Home
+          </a>
+          <a class="nav-item">
+            Examples
+          </a>
+          <a class="nav-item"  routerLink="/admin">
+            Admin
+          </a>
+        </div>
+      </div>
+    </header>
+  </div>
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title is-1">
+        Title
+      </h1>
+      <h2 class="subtitle is-3">
+        Subtitle
+      </h2>
+      <a class="button is-outlined is-large">Get started</a>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <nav class="level">
+      <div class="level-item has-text-centered">
+        <p class="heading">Tweets</p>
+        <p class="title">3,456</p>
+      </div>
+      <div class="level-item has-text-centered">
+        <p class="heading">Following</p>
+        <p class="title">123</p>
+      </div>
+      <div class="level-item has-text-centered">
+        <p class="heading">Followers</p>
+        <p class="title">456K</p>
+      </div>
+      <div class="level-item has-text-centered">
+        <p class="heading">Likes</p>
+        <p class="title">789</p>
+      </div>
+    </nav>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="heading has-text-centered">
+      <h1 class="title">Features</h1>
+    </div>
+    <div class="box">
+      <article class="media">
+        <div class="media-left">
+          <figure class="image is-64x64">
+            <img src="http://placehold.it/128x128" alt="Image">
+          </figure>
+        </div>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <strong>Fast</strong>
+              <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas.
+              Nullam condimentum luctus turpis.
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="box">
+      <article class="media">
+        <div class="media-left">
+          <figure class="image is-64x64">
+            <img src="http://placehold.it/128x128" alt="Image">
+          </figure>
+        </div>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <strong>Easy</strong>
+              <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas.
+              Nullam condimentum luctus turpis.
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="box">
+      <article class="media">
+        <div class="media-left">
+          <figure class="image is-64x64">
+            <img src="http://placehold.it/128x128" alt="Image">
+          </figure>
+        </div>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <strong>Free</strong>
+              <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas.
+              Nullam condimentum luctus turpis.
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="heading has-text-centered">
+      <h1 class="title ">Clients</h1>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="http://placehold.it/300x225" alt="">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-32x32">
+                  <img src="http://placehold.it/64x64" alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-5">John Smith</p>
+                <p class="subtitle is-6">@johnsmith</p>
+              </div>
+            </div>
+
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris. <a href="#">@bulmaio</a>.
+              <a href="#">#css</a> <a href="#">#responsive</a>
+              <br>
+              <small>11:09 PM - 1 Jan 2016</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="http://placehold.it/300x225" alt="">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-32x32">
+                  <img src="http://placehold.it/64x64" alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-5">John Smith</p>
+                <p class="subtitle is-6">@johnsmith</p>
+              </div>
+            </div>
+
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris. <a href="#">@bulmaio</a>.
+              <a href="#">#css</a> <a href="#">#responsive</a>
+              <br>
+              <small>11:09 PM - 1 Jan 2016</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="http://placehold.it/300x225" alt="">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-32x32">
+                  <img src="http://placehold.it/64x64" alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-5">John Smith</p>
+                <p class="subtitle is-6">@johnsmith</p>
+              </div>
+            </div>
+
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris. <a href="#">@bulmaio</a>.
+              <a href="#">#css</a> <a href="#">#responsive</a>
+              <br>
+              <small>11:09 PM - 1 Jan 2016</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+      </p>
+      <p>
+        <a class="icon" href="https://github.com/jgthms/bulma">
+          <i class="fa fa-github"></i>
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>

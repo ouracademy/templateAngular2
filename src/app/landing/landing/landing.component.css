@@ -1,0 +1,22 @@
+.is-with-image{
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.nav-item a, a.nav-item {
+    color:white;
+}
+section.hero > div{
+   background-color: rgba(0,0,0,.7);
+}
+.hero .title{
+    color:white;
+}
+.hero .subtitle{
+    color:#bfafaf;
+}
+

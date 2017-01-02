@@ -1,0 +1,34 @@
+<md-sidenav-container class="demo-sidenav-container">
+  <md-sidenav #start (open)="myinput.focus()" mode="side">
+    <md-nav-list>
+      <a md-list-item *ngFor="let link of links" href="http://www.google.com">
+        <md-icon md-list-icon>folder</md-icon>
+        <span md-line>{{ link.name }}</span>
+        <span md-line class="demo-secondary-text"> Description </span>
+      </a>
+    </md-nav-list>
+  </md-sidenav>
+
+  <md-sidenav #end align="end">
+    End Side Drawer
+    <br>
+    <button md-button (click)="end.close()">Close</button>
+  </md-sidenav>
+  <div class="demo-sidenav-content">
+    <md-toolbar color="primary">
+      <md-icon (click)="start.toggle()" class="demo-toolbar-icon">menu</md-icon>
+      <span>Name</span>
+    </md-toolbar>
+     <md-card>
+    <md-card-title>Basic grid list</md-card-title>
+    <md-card-content class="demo-basic-list">
+      <md-grid-list cols="4" [rowHeight]="basicRowHeight">
+        <md-grid-tile> One </md-grid-tile>
+        <md-grid-tile> Two </md-grid-tile>
+        <md-grid-tile> Three </md-grid-tile>
+        <md-grid-tile> Four </md-grid-tile>
+      </md-grid-list>
+    </md-card-content>
+  </md-card>
+  </div>
+</md-sidenav-container>
