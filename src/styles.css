@@ -6,3 +6,6 @@
 .cdk-overlay-pane{
     margin-top: 50px;
 }
+.nav-item img {
+    max-height: 40px;
+}

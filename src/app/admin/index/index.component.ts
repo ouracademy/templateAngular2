@@ -6,14 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-  logoName: string = 'logo_light.png';
+  logoName: string = 'logo_ouracademy_dark.png';
   chartType: string = 'line';
   constructor() { }
-  myValue = 10;
   ngOnInit() {
   }
   side = 'start';
-
   links: any[] = [
     { name: 'Inbox' },
     { name: 'Outbox' },
