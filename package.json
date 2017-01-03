@@ -1,6 +1,8 @@
 {
   "name": "our-template",
-  "version": "0.0.0",
+  "description": "A admin template Angular 2",
+  "author": "Diana Quintanilla <qpdiam@gmail.com>",
+  "version": "0.1.0",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
