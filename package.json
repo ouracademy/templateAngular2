@@ -2,7 +2,11 @@
   "name": "our-template",
   "description": "A admin template Angular 2",
   "author": "Diana Quintanilla <qpdiam@gmail.com>",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ouracademy/templateAngular2"
+  },
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
