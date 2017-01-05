@@ -9,3 +9,10 @@
 .nav-item img {
     max-height: 40px;
 }
+.hero.is-dark {
+    background-color: #b7b1b1;
+    color: whitesmoke;
+}
+.fill-remaining {
+     flex: 1 1 auto;
+}

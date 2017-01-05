@@ -9,44 +9,35 @@
     </md-nav-list>
   </md-sidenav>
   <div class="custom-sidenav-content ">
-    <header class="section">
-      <div class="container">
-        <div class="columns is-mobile">
-          <div class="column is-4">
-            <button md-icon-button (click)="start.toggle()">
+    <md-toolbar>
+        <button md-icon-button (click)="start.toggle()">
                 <md-icon  class="demo-toolbar-icon">menu</md-icon>
-             </button>
-            <div class="brand">
-              <img src="assets/img/{{logoName}}" alt="Logo">
-            </div>
-          </div>
-          <div class="column  is-4 ">
-            <button md-icon-button>
+        </button>
+        <div class="brand">
+          <img src="assets/img/{{logoName}}" alt="Logo">
+        </div>
+        <span class="fill-remaining "></span>
+        <button md-icon-button>
                 <md-icon  class="demo-toolbar-icon">mail</md-icon>
-            </button>
-            <button md-icon-button>
-              <md-icon  class="demo-toolbar-icon">notifications_none</md-icon>
-            </button>
-          </div>
-          <div class="column is-4 ">
-            <button md-icon-button [mdMenuTriggerFor]="menu" aria-hasPopup="true">
+        </button>
+        <button md-icon-button> <md-icon class="demo-toolbar-icon">notifications_none</md-icon>
+        </button>
+        <button md-icon-button [mdMenuTriggerFor]="menu" aria-hasPopup="true">
               <md-icon>account_circle</md-icon>
-           </button>
-            <md-menu #menu="mdMenu" y-position="below" role="menu">
-              <button md-menu-item role="menuitem">  
+        </button>
+        <md-menu #menu="mdMenu" y-position="below" role="menu">
+          <button md-menu-item role="menuitem">  
               <md-icon> dialpad </md-icon><span> Redial </span>
             </button>
-              <button md-menu-item role="menuitem"> 
+          <button md-menu-item role="menuitem"> 
                 <md-icon> dialpad </md-icon><span> Settings </span> 
             </button>
-              <button md-menu-item role="menuitem">
+          <button md-menu-item role="menuitem">
                 <md-icon> dialpad </md-icon><span> Sign Out </span>
             </button>
-            </md-menu>
-          </div>
-        </div>
-      </div>
-    </header>
+        </md-menu>
+    </md-toolbar>
+
     <div class="tile">
       Dashboard
     </div>

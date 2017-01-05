@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { LandingModule } from './landing/landing.module';
 import { AdminModule } from './admin/admin.module';
 import { RoutingModule } from './routing.module';
+import { AuthService } from './auth.service';
 import 'hammerjs';
 
 @NgModule({
@@ -21,7 +22,7 @@ import 'hammerjs';
     AdminModule,
     RoutingModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

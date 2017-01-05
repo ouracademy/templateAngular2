@@ -2,20 +2,38 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <div class="columns">
-        <md-card class="column is-half is-offset-3">
-          <md-card-title class="">Login</md-card-title>
-          <md-card-content>
-            <md-input-container style="width: 100%">
-              <input md-input placeholder="Username" value="user">
-              <md-hint align="end">ffhwkjh</md-hint>
-            </md-input-container>
-            <md-input-container style="width: 100%">
-              <input md-input placeholder="Password" type="password" value="123456">
-              <md-hint align="end">kjhkjh</md-hint>
-            </md-input-container>
-            <a class="button is-outlined is-large">Get started</a>
-          </md-card-content>
-        </md-card>
+        <div class="column is-8 is-offset-2">
+          <div class="columns">
+            <div class="column is-4 contain-centered">
+              <img src="/assets/img/logo_ouracademy.png" />
+            </div>
+            <div class="column is-8">
+              <md-card class="column">
+                <md-card-title class="">
+                </md-card-title>
+                <md-card-content>
+                  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <md-input-container style="width: 100%">
+                      <input md-input placeholder="Username" formControlName="username">
+                      <md-hint *ngIf="errors.username" align="end">
+                        <span>{{ errors.username  }}</span>
+                      </md-hint>
+                    </md-input-container>
+                    <md-input-container style="width: 100%">
+                      <input md-input placeholder="Password" type="password" formControlName="password">
+                      <md-hint *ngIf="errors.password" align="end">
+                        <span>{{ errors.password  }}</span>
+                      </md-hint>
+                    </md-input-container>
+                    <button type="submit" class="button m-top is-dark is-large" [disabled]="!loginForm.valid" md-raised-button>Login</button>
+                  </form>
+                </md-card-content>
+
+              </md-card>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
   </div>

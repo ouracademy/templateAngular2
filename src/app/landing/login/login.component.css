@@ -1,0 +1,11 @@
+.contain-centered{
+        padding-top: 8%;
+}
+button.is-dark{
+    color: white;
+    background-color: #4e4949;
+    border: 1px solid black;
+}
+.m-top{
+    margin-top: 20px;
+}

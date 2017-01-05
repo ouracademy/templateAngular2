@@ -3,6 +3,10 @@
 }
 .brand{
     display:inline;
+    height:40px;
+}
+.brand img{
+    height: 100%;
 }
 .md-sidenav-content{
    
