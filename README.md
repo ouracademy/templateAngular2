@@ -2,6 +2,14 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
+# See the demo
+
+I am working in complete this admin [demo-admin-template] (https://templateng2.herokuapp.com/) 
+
+# Issues when make: npm install our-template 
+
+After installing the dependencies, the postinstall script is activated and gives us an error. Do not worry this script works by deploying to Heroku. Just install the project and then type ng serve on your computer.
+
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
