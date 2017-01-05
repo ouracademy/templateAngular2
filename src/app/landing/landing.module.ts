@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LandingComponent } from './landing/landing.component';
-import { RoutingModule } from './routing.module';
-import { LoginComponent } from './login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '@angular/material';
 import { ValidationMessagesModule } from 'ng2-custom-validation';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { RoutingModule } from './routing.module';
+import { LoginComponent } from './login/login.component';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   imports: [
