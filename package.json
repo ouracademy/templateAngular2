@@ -2,7 +2,7 @@
   "name": "our-template",
   "description": "A admin template Angular 2",
   "author": "Diana Quintanilla <qpdiam@gmail.com>",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/ouracademy/templateAngular2"
@@ -16,7 +16,7 @@
     "test": "ng test",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "e2e": "protractor",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build"
   },
   "private": false,
   "engines": {

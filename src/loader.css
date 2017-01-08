@@ -1,20 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/core/theming/prebuilt/indigo-pink.css';
-.fill-remaining {
-     flex: 1 1 auto;
-}
-.cdk-overlay-pane{
-    margin-top: 50px;
-}
-.nav-item img {
-    max-height: 40px;
-}
-.hero.is-dark {
-    background-color: #b7b1b1;
-    color: whitesmoke;
-}
 
-/*loaders from http://tobiasahlin.com/spinkit/*/
+
 /*loaders from http://tobiasahlin.com/spinkit/*/
 .spinner-container{
   align-items:center;
