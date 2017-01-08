@@ -67,14 +67,13 @@ export class LoginComponent {
     'password': ''
   };
   validationMessages = {
-    'name': {
+    'username': {
       'required': 'Name is required.',
-      'minlength': 'Name must be at least 4 characters long.',
-      'maxlength': 'Name cannot be more than 24 characters long.',
-      'forbiddenName': 'Someone named "Bob" cannot be a hero.'
+      'minlength': 'Name must be at least 5 characters long.',
+      'maxlength': 'Name cannot be more than 5 characters long.'
     },
     'password': {
-      'required': 'Power is required.'
+      'required': 'Password is required.'
     }
   };
 }
