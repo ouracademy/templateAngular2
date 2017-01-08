@@ -15,14 +15,14 @@
                   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                     <md-input-container style="width: 100%">
                       <input md-input placeholder="Username" formControlName="username">
-                      <md-hint *ngIf="errors.username" align="end">
-                        <span>{{ errors.username  }}</span>
+                      <md-hint *ngIf="formErrors.username" align="end">
+                        <span>{{ formErrors.username  }}</span>
                       </md-hint>
                     </md-input-container>
                     <md-input-container style="width: 100%">
                       <input md-input placeholder="Password" type="password" formControlName="password">
-                      <md-hint *ngIf="errors.password" align="end">
-                        <span>{{ errors.password  }}</span>
+                      <md-hint *ngIf="formErrors.password" align="end">
+                        <span>{{ formErrors.password  }}</span>
                       </md-hint>
                     </md-input-container>
                     <button type="submit" class="button m-top is-dark is-large" [disabled]="!loginForm.valid" md-raised-button>Login</button>
