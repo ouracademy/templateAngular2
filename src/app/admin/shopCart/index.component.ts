@@ -52,10 +52,8 @@ export class ShopCartComponent {
   }
 
   totalCost(): number {
-    return this.shoppingBasket.map((prod: Product) => {
-      return prod.cost * prod.quantity;
-    }).reduce((total, value) => {
-      return total + value;
+    return this.shoppingBasket.reduce((total, product) => {
+      return total + product.cost * product.quantity;
     }, 0);
   }
   spendMore(val: number) {
