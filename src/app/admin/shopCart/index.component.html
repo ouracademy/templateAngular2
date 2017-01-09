@@ -1,4 +1,16 @@
-<h4>Shopping basket</h4>
+
+<h1>How much am I spending?</h1>
+<div class="demo-progress-bar-container">
+  <md-progress-bar [value]="totalCost()/availableForSpend*100"
+                   [bufferValue]="100"
+                   mode="buffer"
+                   color="warn"
+                   ></md-progress-bar>
+</div>
+<span>Spend: {{totalCost()/availableForSpend*100}} %</span>
+<span>Money disponible for spend: {{availableForSpend}}</span>
+<button md-raised-button (click)="spendMore(10)">+</button>
+<button md-raised-button (click)="spendMore(-10)">-</button>
 
 <div class="columns">
   <div class="column is-6">
@@ -22,7 +34,8 @@
   </div>
   <div class="column is-6">
     <md-card dnd-droppable (onDropSuccess)="addToBasket($event)" [dropZones]="['demo1']" class="skin-1">
-      <md-card-title>Shopping Basket<br>(to pay: \${{totalCost()}})</md-card-title>
+      <md-card-title>Shopping Basket<br>(to pay: \${{totalCost()}})
+      <md-slider [ngModel]="totalCost()" min="1" [max]="availableForSpend" thumbLabel disabled ></md-slider></md-card-title>
       <md-card-content>
         <md-list>
           <md-list-item *ngFor="let product of shoppingBasket" >

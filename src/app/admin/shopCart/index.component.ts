@@ -18,6 +18,7 @@ export class Product {
 export class ShopCartComponent {
   availableProducts: Array<Product> = [];
   shoppingBasket: Array<Product> = [];
+  availableForSpend: number = 300;
 
   constructor() {
     this.availableProducts.push(new Product("Blue Shoes", 3, 35));
@@ -38,28 +39,27 @@ export class ShopCartComponent {
    * }
    */
   addToBasket($event) {
-    let newProduct: Product = $event.dragData;
-    for (let indx in this.shoppingBasket) {
-      let product: Product = this.shoppingBasket[indx];
-      if (product.name === newProduct.name) {
-        product.quantity++;
-        return;
-      }
+
+    let product = this.shoppingBasket.find((value) => {
+      return value.name === $event.dragData.name;
+    });
+
+    if(!!product){ 
+      product.quantity++;} 
+    else{
+      this.shoppingBasket.push(new Product($event.dragData.name, 1,$event.dragData.cost));
     }
-    this.shoppingBasket.push(new Product(newProduct.name, 1, newProduct.cost));
-    console.log(this.shoppingBasket);
   }
 
   totalCost(): number {
-    let cost: number = 0;
-    for (let indx in this.shoppingBasket) {
-      let product: Product = this.shoppingBasket[indx];
-      cost += (product.cost * product.quantity);
-    }
-    return cost;
+    return this.shoppingBasket.map((prod: Product) => {
+      return prod.cost * prod.quantity;
+    }).reduce((total, value) => {
+      return total + value;
+    }, 0);
   }
- 
-
-
+  spendMore(val: number) {
+    this.availableForSpend += val;
+  }
 
 }
