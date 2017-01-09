@@ -2,7 +2,7 @@
   "name": "our-template",
   "description": "A admin template Angular 2",
   "author": "Diana Quintanilla <qpdiam@gmail.com>",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/ouracademy/templateAngular2"
@@ -34,6 +34,7 @@
     "@angular/platform-browser-dynamic": "^2.3.1",
     "@angular/router": "^3.3.1",
     "angular-cli": "1.0.0-beta.24",
+    "angular2-google-maps": "^0.17.0",
     "bulma": "^0.2.3",
     "chart.js": "^2.4.0",
     "core-js": "^2.4.1",

@@ -1,0 +1,8 @@
+{{title}}
+<sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+  <sebm-google-map-marker *ngFor="let place of places" [latitude]="place.location.lat" [longitude]="place.location.lng" [label]="'M'">
+    <sebm-google-map-info-window [disableAutoPan]="true">
+      {{place.title}}
+    </sebm-google-map-info-window>
+  </sebm-google-map-marker>
+</sebm-google-map>
