@@ -1,0 +1,39 @@
+<h4>Multi list sortable</h4>
+<div class="columns">
+  <div class="column is-4">
+    <md-card dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="listTodo" class="skin-1">
+      <md-card-title>Todo</md-card-title>
+      <md-card-content>
+        <md-list>
+          <md-list-item *ngFor="let item of listTodo; let i = index" class="list-group-item" dnd-sortable [sortableIndex]="i">
+            <p md-line>{{item}}</p>
+          </md-list-item>
+        </md-list>
+      </md-card-content>
+    </md-card>
+  </div>
+  <div class="column is-4">
+    <md-card dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="listDoing" class="skin-1">
+      <md-card-title>Doing</md-card-title>
+      <md-card-content>
+        <md-list>
+          <md-list-item *ngFor="let item of listDoing; let i = index" class="list-group-item" dnd-sortable [sortableIndex]="i">
+            <p md-line>{{item}}</p>
+          </md-list-item>
+        </md-list>
+      </md-card-content>
+    </md-card>
+  </div>
+  <div class="column is-4">
+    <md-card dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="listDone" class="skin-1">
+      <md-card-title>Done</md-card-title>
+      <md-card-content>
+        <md-list>
+          <md-list-item *ngFor="let item of listDone; let i = index" class="list-group-item" dnd-sortable [sortableIndex]="i">
+            <p md-line>{{item}}</p>
+          </md-list-item>
+        </md-list>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>

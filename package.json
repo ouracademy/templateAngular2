@@ -2,7 +2,7 @@
   "name": "our-template",
   "description": "A admin template Angular 2",
   "author": "Diana Quintanilla <qpdiam@gmail.com>",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "repository": {
     "type": "git",
     "url": "https://github.com/ouracademy/templateAngular2"
@@ -42,6 +42,7 @@
     "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
     "ng2-charts": "^1.4.4",
+    "ng2-dnd": "^2.1.1",
     "path": "^0.12.7",
     "rxjs": "^5.0.1",
     "ts-helpers": "^1.1.1",
