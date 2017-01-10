@@ -1,15 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as fs from 'fs';
-export class Product {
-  quantity: number;
-  name: string;
-  cost: number;
-  constructor(name: string, quantity: number, cost: number) {
-    this.quantity = quantity;
-    this.name = name;
-    this.cost = cost;
-  }
-}
+
 @Component({
   selector: 'app-reader',
   templateUrl: './index.component.html',
