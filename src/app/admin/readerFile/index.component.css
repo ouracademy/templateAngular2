@@ -1,0 +1,13 @@
+
+.skin-1 {
+   background-color: #f5f5f5;
+}
+.skin-1 md-list-item{
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.skin-1 md-list-item:hover{
+    background-color: #ecece8;
+
+}
