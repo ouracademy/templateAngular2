@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { ReaderFileComponent } from './index.component';
+import { SecuencyImageComponent } from './index.component';
 
-describe('ReaderFileComponent', () => {
-  let component: ReaderFileComponent;
-  let fixture: ComponentFixture<ReaderFileComponent>;
+describe('PlannerComponent', () => {
+  let component: SecuencyImageComponent;
+  let fixture: ComponentFixture<SecuencyImageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReaderFileComponent ]
+      declarations: [ SecuencyImageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ReaderFileComponent);
+    fixture = TestBed.createComponent(SecuencyImageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
