@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-map',
@@ -6,21 +7,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index.component.css']
 })
 export class MapComponent implements OnInit {
-
+  title: string = 'Angular2-google-maps project';
+  lat: number = 0;
+  lng: number = 0;
+  loadLocation: boolean = false;
+  zoom: number = 18;
+  myPosition = { lat: 0, lng: 0 };
+  places = [];
   constructor() { }
   ngOnInit() {
+    this.showPosition();
   }
-  title: string = 'Angular2-google-maps project';
-  lat: number = 40.7413549;
-  lng: number = -73.9980244;
-  zoom: number = 13;
-  places = [
-          {title: 'Park Ave Penthouse', location: {lat: 40.7713024, lng: -73.9632393}},
-          {title: 'Chelsea Loft', location: {lat: 40.7444883, lng: -73.9949465}},
-          {title: 'Union Square Open Floor Plan', location: {lat: 40.7347062, lng: -73.9895759}},
-          {title: 'East Village Hip Studio', location: {lat: 40.7281777, lng: -73.984377}},
-          {title: 'TriBeCa Artsy Bachelor Pad', location: {lat: 40.7195264, lng: -74.0089934}},
-          {title: 'Chinatown Homey Space', location: {lat: 40.7180628, lng: -73.9961237}}
-        ];
+
+  showPosition() {
+    navigator.geolocation.getCurrentPosition(
+      (response) => {
+        this.lat = this.myPosition.lat = response.coords.latitude;
+        this.lng = this.myPosition.lng = response.coords.longitude;
+        this.places.push({ title: 'My position', location: this.myPosition });
+        this.loadLocation = true;
+      }, () => {
+
+      });
+  }
 
 }

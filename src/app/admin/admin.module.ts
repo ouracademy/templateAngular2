@@ -13,6 +13,7 @@ import { ReaderFileComponent } from './readerFile/index.component';
 import { AgileBoardComponent } from './agile_board/index.component';
 import { ClockComponent } from './clock/index.component';
 import { SecuencyImageComponent } from './secuencyImage/index.component';
+import { GeolocationComponent } from './geolocation/geolocation.component';
 @NgModule({
   imports: [
     CommonModule, MaterialModule.forRoot(), FormsModule, RoutingModule, ChartCustomModule,
@@ -23,6 +24,7 @@ import { SecuencyImageComponent } from './secuencyImage/index.component';
   ],
   declarations: [IndexComponent, MapComponent, ShopCartComponent,
     AgileBoardComponent, ReaderFileComponent,ClockComponent,
-    SecuencyImageComponent]
+    SecuencyImageComponent,
+    GeolocationComponent]
 })
 export class AdminModule { }
