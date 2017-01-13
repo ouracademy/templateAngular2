@@ -1,14 +1,38 @@
-<h4>{{title}}</h4>
-<span>My position:</span>
-<span>{{myPosition.lat}}</span>
-<span>{{myPosition.lng}}<span>
-<button md-button (click)="addMarker()">Add Marker</button>
-<div *ngIf="loadLocation">
-    <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom"  [mapDraggable]="'true'">
-      <sebm-google-map-marker *ngFor="let location of locations" [latitude]="location.coords.lat" [longitude]="location.coords.lng" [label]="'M'" [markerDraggable]="location.draggable">
+<h1>Guide to Piura</h1>
+<div *ngIf="!auth">
+  <button md-button (click)="login()">Login</button>
+</div>
+<div *ngIf="auth">
+  <div>
+    <button (click)="logout()">Logout</button>
+    <!-- <div> {{ (af.auth | async)?.uid }} </div>-->
+
+    <span>My position:</span><span>{{myPosition.lat}}</span><span>{{myPosition.lng}}</span>
+    <md-input-container style="width: 100%">
+      <input md-input placeholder="Place" [(ngModel)]="title">
+    </md-input-container>
+    <button md-raised-button (click)="addMarker()" class="button is-primary">Add Marker</button>
+  </div>
+  <div *ngIf="loadLocation">
+    <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [mapDraggable]="'true'">
+      <sebm-google-map-marker [latitude]="myPosition.lat" [longitude]="myPosition.lng" [label]="'P'" [markerDraggable]="true">
         <sebm-google-map-info-window [disableAutoPan]="true">
-          {{location.title}}
+          <h2>My position</h2>
+        </sebm-google-map-info-window>
+      </sebm-google-map-marker>
+      <sebm-google-map-marker *ngFor="let location of locations | async,let i = index" [latitude]="location.coords.lat" [longitude]="location.coords.lng"
+        [label]="'M'" (markerClick)="clickedMarker('P', i)" [markerDraggable]="location.draggable" (dragEnd)="markerDragEnd(location, $event)">
+        <sebm-google-map-info-window [disableAutoPan]="true">
+          <p>{{location.title}}</p>
+          <p> {{location.coords.lat}}</p>
+          <p> {{location.coords.lng}}</p>
         </sebm-google-map-info-window>
       </sebm-google-map-marker>
     </sebm-google-map>
+  </div>
+  <ul>
+    <li class="text" *ngFor="let l of locations | async">
+      {{l.title}}
+    </li>
+  </ul>
 </div>
