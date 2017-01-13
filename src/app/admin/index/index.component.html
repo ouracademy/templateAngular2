@@ -1,10 +1,10 @@
 <md-sidenav-container class="demo-sidenav-container">
   <md-sidenav #start mode="side">
     <md-nav-list>
-      <a md-list-item *ngFor="let link of links" href="http://www.google.com">
+      <a md-list-item *ngFor="let link of links" (click)="goTo(link)">
         <md-icon md-list-icon>folder</md-icon>
         <span md-line>{{ link.name }}</span>
-        <span md-line class="demo-secondary-text"> Description </span>
+        <span md-line class="demo-secondary-text">  </span>
       </a>
     </md-nav-list>
   </md-sidenav>
@@ -37,79 +37,6 @@
             </button>
       </md-menu>
     </md-toolbar>
-
-    <div class="tile">
-      Dashboard
-    </div>
-    <section class="section">
-      <div class="container">
-        <h2 class="subtitle">Sales</h2>
-        <div class="columns">
-          <div class="column is-3">
-            <doughnut></doughnut>
-          </div>
-          <div class="column is-3">
-            <doughnut></doughnut>
-          </div>
-          <div class="column is-3">
-            <doughnut></doughnut>
-          </div>
-          <div class="column is-3">
-            <doughnut></doughnut>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-half is-offset-one-quarter">
-            <random [lineChartType]="chartType"></random>
-          </div>
-        </div>
-        <button (click)="randomizeType()" style="display: inline-block">Toggle</button>
-      </div>
-    </section>
-
-    <md-card>
-      <md-card-title>Basic grid list</md-card-title>
-      <md-card-content class="demo-basic-list">
-        <md-grid-list cols="4" [rowHeight]="basicRowHeight">
-          <md-grid-tile> One </md-grid-tile>
-          <md-grid-tile> Two </md-grid-tile>
-          <md-grid-tile> Three </md-grid-tile>
-          <md-grid-tile> Four </md-grid-tile>
-        </md-grid-list>
-      </md-card-content>
-    </md-card>
-    <section class="section">
-      <div class="container">
-        <app-map></app-map>
-      </div>
-    </section>
-    <section class="section ">
-      <div class="container">
-        <app-shop></app-shop>
-      </div>
-    </section>
-    <section class="section ">
-      <div class="container">
-        <app-agile-board></app-agile-board>
-      </div>
-    </section>
-    <section class="section ">
-      <div class="container">
-        <app-reader></app-reader>
-      </div>
-    </section>
-    <section class="section ">
-      <div class="container">
-        <app-clock></app-clock>
-      </div>
-    </section>
-    <section>
-      <app-secuency-image></app-secuency-image>
-    </section>
-
+    <router-outlet></router-outlet>
   </div>
 </md-sidenav-container>

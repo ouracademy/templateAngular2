@@ -7,13 +7,19 @@ import { FormsModule } from '@angular/forms';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { DndModule } from 'ng2-dnd';
 import { IndexComponent } from './index/index.component';
-import { MapComponent } from './map/index.component';
-import { ShopCartComponent } from './shopCart/index.component';
-import { ReaderFileComponent } from './readerFile/index.component';
-import { AgileBoardComponent } from './agile_board/index.component';
-import { ClockComponent } from './clock/index.component';
-import { SecuencyImageComponent } from './secuencyImage/index.component';
-import { GeolocationComponent } from './geolocation/geolocation.component';
+
+import { MapComponent } from './components/map/index.component';
+import { ShopCartComponent } from './components/shopCart/index.component';
+import { ReaderFileComponent } from './components/readerFile/index.component';
+import { AgileBoardComponent } from './components/agile_board/index.component';
+import { ClockComponent } from './components/clock/index.component';
+import { SecuencyImageComponent } from './components/secuencyImage/index.component';
+import { GeolocationComponent } from './components/geolocation/geolocation.component';
+
+import { GuideMapComponent } from './pageComponents/guideMap/index.component';
+import { DragAndDropComponent } from './pageComponents/dragDrop/index.component';
+import { OtherSamplesComponent } from './pageComponents/otherSamples/index.component';
+import { ReportChartsComponent } from './pageComponents/reportCharts/index.component';
 @NgModule({
   imports: [
     CommonModule, MaterialModule.forRoot(), FormsModule, RoutingModule, ChartCustomModule,
@@ -23,8 +29,11 @@ import { GeolocationComponent } from './geolocation/geolocation.component';
     DndModule.forRoot()
   ],
   declarations: [IndexComponent, MapComponent, ShopCartComponent,
-    AgileBoardComponent, ReaderFileComponent,ClockComponent,
-    SecuencyImageComponent,
-    GeolocationComponent]
+    AgileBoardComponent, ReaderFileComponent, ClockComponent,
+    SecuencyImageComponent,GeolocationComponent,
+    GuideMapComponent,
+    DragAndDropComponent,
+    OtherSamplesComponent,
+    ReportChartsComponent]
 })
 export class AdminModule { }

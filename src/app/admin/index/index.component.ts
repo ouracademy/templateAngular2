@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-index',
@@ -7,21 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
   logoName: string = 'logo_ouracademy_dark.png';
-  chartType: string = 'line';
-  constructor() { }
-  ngOnInit() {
-  }
   side = 'start';
   links: any[] = [
-    { name: 'Inbox' },
-    { name: 'Outbox' },
-    { name: 'Spam' },
-    { name: 'Trash' }
+    { name: 'Principal', route: 'admin' },
+    { name: 'GuideMap',route: 'admin/guideMap' },
+    { name: 'DragDrop',route: 'admin/drag-drop' },
+    { name: 'Other',route: 'admin/other' }
   ];
-  basicRowHeight = 80;
-  public randomizeType(): void {
-    this.chartType = this.chartType === 'line' ? 'bar' : 'line';
+
+  constructor(private router: Router) { 
+    this.router = router;
   }
-
-
+  ngOnInit() {
+  }
+  goTo(link):void {
+    this.router.navigate([link.route]);
+  }
 }

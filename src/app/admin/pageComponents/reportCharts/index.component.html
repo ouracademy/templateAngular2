@@ -1,0 +1,44 @@
+<div class="tile">
+  Dashboard
+</div>
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle">Sales</h2>
+    <div class="columns">
+      <div class="column is-3">
+        <doughnut></doughnut>
+      </div>
+      <div class="column is-3">
+        <doughnut></doughnut>
+      </div>
+      <div class="column is-3">
+        <doughnut></doughnut>
+      </div>
+      <div class="column is-3">
+        <doughnut></doughnut>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-half is-offset-one-quarter">
+        <random [lineChartType]="chartType"></random>
+      </div>
+    </div>
+    <button (click)="randomizeType()" style="display: inline-block">Toggle</button>
+  </div>
+</section>
+
+<md-card>
+  <md-card-title>Basic grid list</md-card-title>
+  <md-card-content class="demo-basic-list">
+    <md-grid-list cols="4" [rowHeight]="basicRowHeight">
+      <md-grid-tile> One </md-grid-tile>
+      <md-grid-tile> Two </md-grid-tile>
+      <md-grid-tile> Three </md-grid-tile>
+      <md-grid-tile> Four </md-grid-tile>
+    </md-grid-list>
+  </md-card-content>
+</md-card>
