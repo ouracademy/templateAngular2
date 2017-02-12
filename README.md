@@ -40,4 +40,4 @@ To get more help on the `angular-cli` use `ng help` or go check out the [Angular
 
 ## Deploy using Heroku
 
-Please go to branch : prod.
+If you are in github please go to the prod branch, if you are in npm go to github, and select the branch prod.
