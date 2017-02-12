@@ -40,4 +40,4 @@ To get more help on the `angular-cli` use `ng help` or go check out the [Angular
 
 ## Deploy using Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ouracademy/templateAngular2)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/qpdian/templateAngular2/tree/prod)
