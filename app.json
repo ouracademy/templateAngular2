@@ -1,7 +1,7 @@
 {
   "name": "Our template",
   "description": "A admin template Angular 2",
-  "repository": "https://github.com/ouracademy/templateAngular2",
+  "repository": "https://github.com/qpdian/templateAngular2/tree/prod",
   "logo": "http://4.bp.blogspot.com/-Ws81Mk2uCIs/VS1zYb0zRVI/AAAAAAAAAyI/jUlmaGtDYCA/s1600/Heroku_logo.png",
   "keywords": ["node", "angular2", "material"]
 }
