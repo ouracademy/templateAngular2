@@ -40,8 +40,4 @@ To get more help on the `angular-cli` use `ng help` or go check out the [Angular
 
 ## Deploy using Heroku
 
-<<<<<<< HEAD
-If you are in github please go to the prod branch, if you are in npm go to github, and select the branch prod.
-=======
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/qpdian/templateAngular2/tree/prod)
->>>>>>> c1d7efe66676420529c27033c017fa19c3131445
